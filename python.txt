@@ -1,0 +1,2 @@
+python
+path[:] --  copy of path
