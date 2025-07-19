@@ -1,0 +1,165 @@
+07.09 9:30 PM
+Intermediate-level Python Data Structures and Algorithms (DSA).
+Lists, sets, dictionaries, tuples
+Basic loops and functions
+Simple recursion
+Big-O notation fundamentals
+We’ll now cover intermediate topics step-by-step with code examples and explanations.
+---
+
+ 1. Recursion Deep Dive
+
+ Backtracking (Subset Generation)
+
+def subsets(nums):
+    res = []
+
+    def backtrack(start, path):
+        res.append(path[:])
+        for i in range(start, len(nums)):
+            path.append(nums[i])
+            backtrack(i + 1, path)
+            path.pop()  # undo last step
+
+    backtrack(0, [])
+    return res
+
+print(subsets([1, 2, 3]))
+
+---
+
+🛠️ 2. Sorting Algorithms
+
+ QuickSort
+
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+    left = [x for x in arr[1:] if x <= pivot]
+    right = [x for x in arr[1:] if x > pivot]
+    return quicksort(left) + [pivot] + quicksort(right)
+
+print(quicksort([5, 2, 9, 1, 5, 6]))
+
+---
+
+ 3. Linked Lists
+
+ Singly Linked List
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, val):
+        new_node = Node(val)
+        new_node.next = self.head
+        self.head = new_node
+
+    def print_list(self):
+        curr = self.head
+        while curr:
+            print(curr.val, end=" -> ")
+            curr = curr.next
+
+ll = LinkedList()
+ll.insert(3)
+ll.insert(2)
+ll.insert(1)
+ll.print_list()  # 1 -> 2 -> 3 ->
+
+---
+
+ 4. Binary Trees
+
+ Inorder Traversal
+
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val, end=' ')
+        inorder(root.right)
+
+# Example tree
+root = TreeNode(1)
+root.right = TreeNode(2)
+root.right.left = TreeNode(3)
+inorder(root)  # Output: 1 3 2
+
+---
+
+ 5. Stacks & Queues
+
+ Stack using List
+
+stack = []
+stack.append(1)
+stack.append(2)
+print(stack.pop())  # 2
+
+ Queue using collections.deque
+
+from collections import deque
+
+queue = deque()
+queue.append(1)
+queue.append(2)
+print(queue.popleft())  # 1
+
+---
+
+🧭 6. Searching Algorithms
+
+ Binary Search
+
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+print(binary_search([1, 2, 3, 4, 5], 4))  # Output: 3
+
+---
+
+ 7. Hashing
+
+ Two Sum Problem
+
+def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in seen:
+            return [seen[diff], i]
+        seen[num] = i
+    return []
+
+print(two_sum([2, 7, 11, 15], 9))  # Output: [0, 1]
+
+---
+
+✅ Next Steps
+1. Graphs (BFS, DFS, adjacency list/matrix)
+2. Dynamic Programming (memoization, tabulation)
+3. Greedy Algorithms
+4. Tries and Heaps
+5. Practice Problems
