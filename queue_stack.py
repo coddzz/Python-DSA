@@ -1,20 +1,11 @@
-# Queue using collections.deque
+
 from collections import deque
 
-queue = deque()  # Queue using collections.deque
-queue.append(1)
-queue.append(2)
-queue.append(3)
-print(queue)            # [1, 2, 3]
-print(queue.popleft())  # 1
-print(queue.pop())      # 3
-print(queue.popleft())  # 2
+queue = deque([1, 2, 3])  # Queue using collections.deque 
+print(queue.popleft())  # 1 -->  we can use popleft()
+print(queue.pop())      # 3  --> pop()
 
-print(deque([1,2,3,4]))
 
-#Stack
-stack = [1, 2, 3] # using array
-
-print(stack.pop())      # 3
-print(stack.pop())      # 2
-print(stack.pop())      # 1
+stack = [1, 2, 3]
+print(stack.pop())   # 3   --> pop()
+print(stack.pop())   # 2
