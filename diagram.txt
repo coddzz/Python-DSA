@@ -1,0 +1,29 @@
+
+LinkedList
++------------+
+|   head     |
++------------+
+   |
+   v
++-------+
+| Node  |        +-------+       +-------+
+| val   |        | val   |       | val   |
++-------+        +-------+       +-------+
+   |               |               |
+   v               v               v
++-------+       +-------+       +-------+
+| Node  | ----> | Node  | ----> | Node  |
+| val   |       | val   |       | val   |
++-------+       +-------+       +-------+
+
+1. create a class Node.
+   self.val
+   self.next=none
+
+2. create a class LinkedList.
+   self.head = none
+
+3. inserting value
+   new_node(val) -> self.next -> self.head -> new_node(val) -> self.next ...
+
+4. print the value using while loop.
