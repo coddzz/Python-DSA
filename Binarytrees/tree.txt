@@ -1,0 +1,12 @@
+        1
+      /   \
+     5     2
+         /   \
+        3     4
+
+1 is the root.
+Left child of 1 is 5.
+Right child of 1 is 2.
+2 has two children: left 3 and right 4.
+
+Output: 5 1 3 2 4

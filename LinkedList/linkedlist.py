@@ -13,7 +13,6 @@ class LinkedList:
         new_node.next = self.head 
         self.head = new_node 
         
-
     def print_list(self):
         curr = self.head
         while curr:
