@@ -10,4 +10,4 @@ def binary_search(arr, target):
             high = mid - 1
     return -1
 
-print(binary_search([1, 2, 3, 4, 5], 4))  # Output: 3
+print(binary_search([22, 16, 13, 15, 35], 16))  # Output: 3
