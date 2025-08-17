@@ -1,2 +1,21 @@
-python
+Python
 path[:] --  copy of path
+
+> nodemon --exec python code.py //npm install -g nodemon
+
+
+# enumerate()
+
+nums = [5,4,11,18]
+num_map = {}
+for i, num in enumerate(nums):
+    print(i, num)
+    num_map[i] = num
+print(num_map)  #output {0: 5, 1: 4, 2: 11, 3: 18}
+
+
+# access num_map = {}  using items, keys, values
+
+print(list(num_map.values()))
+print(list(num_map.keys()))
+print(list(num_map.items()))
