@@ -7,7 +7,7 @@ Big-O notation fundamentals
 We’ll now cover intermediate topics step-by-step with code examples and explanations.
 ---
 
- 1. Recursion Deep Dive
+1. Recursion Deep Dive
 
  Backtracking (Subset Generation)
 
@@ -28,7 +28,7 @@ print(subsets([1, 2, 3]))
 
 ---
 
-🛠️ 2. Sorting Algorithms
+2. Sorting Algorithms
 
  QuickSort
 
@@ -44,7 +44,7 @@ print(quicksort([5, 2, 9, 1, 5, 6]))
 
 ---
 
- 3. Linked Lists
+3. Linked Lists
 
  Singly Linked List
 
@@ -76,7 +76,7 @@ ll.print_list()  # 1 -> 2 -> 3 ->
 
 ---
 
- 4. Binary Trees
+4. Binary Trees
 
  Inorder Traversal
 
@@ -100,7 +100,7 @@ inorder(root)  # Output: 1 3 2
 
 ---
 
- 5. Stacks & Queues
+5. Stacks & Queues
 
  Stack using List
 
@@ -120,7 +120,7 @@ print(queue.popleft())  # 1
 
 ---
 
-🧭 6. Searching Algorithms
+6. Searching Algorithms
 
  Binary Search
 
@@ -156,8 +156,7 @@ def two_sum(nums, target):
 print(two_sum([2, 7, 11, 15], 9))  # Output: [0, 1]
 
 ---
-
-✅ Next Steps
+Next Steps
 1. Graphs (BFS, DFS, adjacency list/matrix)
 2. Dynamic Programming (memoization, tabulation)
 3. Greedy Algorithms
